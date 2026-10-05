@@ -1,0 +1,66 @@
+/* StatLens Design Tokens & Dark Blue Analytical Palette */
+:root {
+  /* Color Palette - Refined Dark Blue Theme */
+  --bg-canvas: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --bg-muted: #f1f5f9;
+  --bg-active: #eff6ff;
+
+  /* Sidebar Dark Blue Palette */
+  --sidebar-bg: #0b1329;
+  --sidebar-border: #1e293b;
+  --sidebar-text: #94a3b8;
+  --sidebar-text-hover: #f8fafc;
+  --sidebar-active-bg: rgba(37, 99, 235, 0.15);
+  --sidebar-active-text: #60a5fa;
+  --sidebar-active-border: rgba(96, 165, 250, 0.4);
+  --sidebar-footer-bg: #070d1e;
+
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-focus: #2563eb;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-accent: #1d4ed8;
+
+  /* Rich Blue Accents & Gradients */
+  --accent-primary: #1e40af;
+  --accent-hover: #1d4ed8;
+  --accent-vibrant: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-subtle: #eff6ff;
+  --accent-border: #bfdbfe;
+  --accent-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  --accent-glow: 0 4px 14px 0 rgba(37, 99, 235, 0.35);
+
+  /* Secondary Status Colors */
+  --status-ready: #059669;
+  --status-ready-bg: #ecfdf5;
+  --status-empty: #64748b;
+  --status-empty-bg: #f1f5f9;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevation / Shadows with rich hover response */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+  --shadow-blue-hover: 0 10px 25px -3px rgba(37, 99, 235, 0.15), 0 4px 8px -2px rgba(37, 99, 235, 0.08);
+
+  /* Layout Measurements */
+  --sidebar-width: 250px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,318 @@
+/* StatLens Layout Styles — Dark Blue Accent Theme */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  position: relative;
+}
+
+/* Sidebar Styles - Deep Midnight Dark Blue */
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 50;
+  transition: transform var(--transition-normal);
+}
+
+.sidebar-header {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 0.725rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 3px;
+  letter-spacing: 0.03em;
+}
+
+/* Navigation */
+.sidebar-nav {
+  padding: 22px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--sidebar-text);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--sidebar-text-hover);
+  transform: translateX(3px);
+}
+
+.nav-item.active {
+  background-color: var(--sidebar-active-bg);
+  color: #ffffff;
+  font-weight: 600;
+  border-color: var(--sidebar-active-border);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-item:hover .nav-icon {
+  opacity: 1;
+  color: #60a5fa;
+}
+
+.nav-item.active .nav-icon {
+  opacity: 1;
+  color: #60a5fa;
+}
+
+/* Sidebar Footer / Dataset Status Area */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid var(--sidebar-border);
+  background-color: var(--sidebar-footer-bg);
+}
+
+.dataset-status-box {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--sidebar-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  transition: border-color var(--transition-fast);
+}
+
+.dataset-status-box:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.dataset-status-label {
+  font-size: 0.675rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.dataset-status-value {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dataset-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #475569;
+  display: inline-block;
+}
+
+.dataset-status-box.ready .dataset-status-dot {
+  background-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.dataset-status-box.ready .dataset-status-value {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.mobile-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: var(--sidebar-bg);
+  border-bottom: 1px solid var(--sidebar-border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.mobile-menu-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8fafc;
+}
+
+.page-wrapper {
+  padding: 32px 40px 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Backdrop for mobile drawer */
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(11, 19, 43, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 45;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .page-wrapper {
+    padding: 24px 20px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop.open {
+    display: block;
+    opacity: 1;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+}
+
+/* Print / Export Styles */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .sidebar,
+  .sidebar-backdrop,
+  .mobile-header,
+  .page-header-actions,
+  #exportReportBtn {
+    display: none !important;
+  }
+
+  .app-layout {
+    display: block !important;
+    min-height: auto !important;
+    background: #ffffff !important;
+  }
+
+  .main-content {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .page-wrapper {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .card, .metric-card, .chart-container {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 20px !important;
+  }
+
+  .calc-transparency-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  details[open] .transparency-content {
+    display: block !important;
+  }
+}
